@@ -43,6 +43,7 @@ h1, h2, h3 {
     text-align: center;
     color: var(--secondary);
     font-family: 'Staatliches', sans-serif;
+    text-decoration: none;
 }
 
 h1 {
@@ -60,10 +61,12 @@ h3 {
 .header {
     display: flex;
     justify-content: center;
+    text-decoration: none;
 }
 
 .header_logo {
     margin: 3rem 0;
+    text-decoration: none;
 }
 
 .navegacion {
@@ -72,35 +75,40 @@ h3 {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    text-decoration: none;
 }
 
 .navegacion_enlace {
     font-family: var(--principalFont);
     color: var(--white);
     font-size: 3rem;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .navegacion_enlace--activo,
 .navegacion_enlace:hover {
     color: var(--secondary);
+    text-decoration: none !important;
 }
 
 .footer {
     background-color: var(--primaryShadow);
     padding: 1rem 0;
     margin-top: 2rem;
+    text-decoration: none;
 }
 
 .footer_texto {
     font-family: var(--principalFont);
     text-align: center;
+    text-decoration: none;
 }
 
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
+    text-decoration: none;
 }
 
 .Pets {
@@ -109,10 +117,12 @@ h3 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    text-decoration: none;
 }
 
 .Pets:hover {
     transform: scale(1.05);
+    text-decoration: none;
 }
 
 .Pets_imagen {
@@ -120,6 +130,7 @@ h3 {
     max-height: 200px;
     object-fit: cover;
     border-radius: 8px;
+    text-decoration: none;
 }
 
 .Breed {
@@ -128,37 +139,50 @@ h3 {
     margin: 1rem 0;
     text-align: center;
     line-height: 1.2;
+    text-decoration: none;
 }
 
 @media (min-width: 767px) {
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        text-decoration: none;
     }
 }
 
 @media (max-width: 767px) {
     .grid {
         grid-template-columns: repeat(1, 1fr);
+        text-decoration: none;
     }
 
     .pareja {
         margin-bottom: 1rem; /* Ajusta el espacio entre las tarjetas en dispositivos móviles */
+        text-decoration: none;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
+        text-decoration: none;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
+        text-decoration: none;
     }
 }
 @media (min-width: 1200px) {
     .grid {
         grid-template-columns: repeat(4, 1fr);
+        text-decoration: none;
     }
+}
+.navbar-nav .nav-link {
+    text-decoration: none !important;
+}
+.grid .Pets a {
+    text-decoration: none;
 }
