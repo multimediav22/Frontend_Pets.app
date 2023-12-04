@@ -1,8 +1,7 @@
 :root {
     --primary: #279eb0;
     --primaryShadow: #00000066;
-    --secubdary: #FFCE00;
-    --secundary: rgba(233, 267,2);
+    --secondary: #FFCE00;
     --white: #fff;
     --black: #000;
     --principalFont: 'Staatliches', cursive;
@@ -12,6 +11,7 @@ body {
     background-color: var(--primary);
     font-size: 1.6rem;
     line-height: 1.5;
+    margin: 0;
 }
 
 p {
@@ -31,6 +31,7 @@ html {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -40,7 +41,7 @@ img {
 
 h1, h2, h3 {
     text-align: center;
-    color : var(--secubdary);
+    color: var(--secondary);
     font-family: 'Staatliches', sans-serif;
 }
 
@@ -70,22 +71,19 @@ h3 {
     padding: 1rem;
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .navegacion_enlace {
     font-family: var(--principalFont);
     color: var(--white);
     font-size: 3rem;
-}
-
-.navegacion_enlace:last-of-type {
-    margin-right: 0;
+    text-decoration: none;
 }
 
 .navegacion_enlace--activo,
 .navegacion_enlace:hover {
-    color: var(--secubdary);
+    color: var(--secondary);
 }
 
 .footer {
@@ -97,52 +95,70 @@ h3 {
 .footer_texto {
     font-family: var(--principalFont);
     text-align: center;
-    
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
 }
 
-@media (min-width: 768px) {
+.Pets {
+    background-color: var(--primaryShadow);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.Pets:hover {
+    transform: scale(1.05);
+}
+
+.Pets_imagen {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.Breed {
+    font-size: 3rem;
+    font-family: var(--principalFont);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+
+@media (min-width: 767px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 767px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pareja {
+        margin-bottom: 1rem; /* Ajusta el espacio entre las tarjetas en dispositivos móviles */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1200px) {
     .grid {
         grid-template-columns: repeat(4, 1fr);
-    }
-
-    .Pets {
-        background-color: var(--primaryShadow);
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .Pets:hover {
-        transform: scale(1.05);
-    }
-
-    .Pets_imagen {
-        width: 100%;
-        max-height: 200px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
-
-    .Breed {
-        font-size: 3rem;
-        font-family: var(--principalFont);
-        margin: 1rem 0;
-        text-align: center;
-        line-height: 1.2;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .grid .Pets a {
-        text-decoration: none;
     }
 }
